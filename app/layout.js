@@ -10,7 +10,7 @@ import ChatBot from "@/components/ui/ChatBot"; // Import ChatBot
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "AI Career Coach",
+  title: "Avia AI",
   description: "",
 };
 
@@ -23,7 +23,7 @@ export default function RootLayout({ children }) {
     >
       <html lang="en" suppressHydrationWarning>
         <head>
-          <link rel="icon" href="/logo.png" sizes="any" />
+          <link rel="icon" href="/smalllogo.png" sizes="any" />
         </head>
         <body className={`${inter.className}`}>
           <ThemeProvider
@@ -35,13 +35,13 @@ export default function RootLayout({ children }) {
             <Header />
             <main className="min-h-screen">{children}</main>
 
-            <ChatBot /> {/* ✅ Added ChatBot here */}
+            <ChatBot /> 
             
             <Toaster richColors />
 
             <footer className="bg-muted/50 py-12">
               <div className="container mx-auto px-4 text-center text-gray-200">
-                <p>Made with 💗 by itsbhh</p>
+                <p>@itsbhh</p>
               </div>
             </footer>
           </ThemeProvider>
