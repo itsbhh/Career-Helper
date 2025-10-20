@@ -62,7 +62,7 @@ export default function LandingPage() {
         <div className="container mx-auto px-4 md:px-6">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto text-center">
             <div className="flex flex-col items-center justify-center space-y-2">
-              <h3 className="text-4xl font-bold">50+</h3>
+              <h3 className="text-4xl font-bold">100+</h3>
               <p className="text-muted-foreground">Industries Covered</p>
             </div>
             <div className="flex flex-col items-center justify-center space-y-2">
@@ -70,7 +70,7 @@ export default function LandingPage() {
               <p className="text-muted-foreground">Interview Questions</p>
             </div>
             <div className="flex flex-col items-center justify-center space-y-2">
-              <h3 className="text-4xl font-bold">95%</h3>
+              <h3 className="text-4xl font-bold">90%</h3>
               <p className="text-muted-foreground">Success Rate</p>
             </div>
             <div className="flex flex-col items-center justify-center space-y-2">
@@ -184,29 +184,56 @@ export default function LandingPage() {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="w-full">
-        <div className="mx-auto py-24 gradient rounded-lg">
-          <div className="flex flex-col items-center justify-center space-y-4 text-center max-w-3xl mx-auto">
-            <h2 className="text-3xl font-bold tracking-tighter text-primary-foreground sm:text-4xl md:text-5xl">
-              Ready to Accelerate Your Career?
-            </h2>
-            <p className="mx-auto max-w-[600px] text-primary-foreground/80 md:text-xl">
-              Join thousands of professionals who are advancing their careers
-              with AI-powered guidance.
-            </p>
-            <Link href="/dashboard" passHref>
-              <Button
-                size="lg"
-                variant="secondary"
-                className="h-11 mt-5 animate-bounce"
-              >
-                Start Your Journey Today <ArrowRight className="ml-2 h-4 w-4" />
-              </Button>
-            </Link>
-          </div>
-        </div>
-      </section>
+   {/* CTA Section */}
+<section className="w-full py-24 gradient rounded-lg">
+  <div className="flex flex-col items-center justify-center space-y-8 text-center max-w-3xl mx-auto">
+
+    {/* Avia AI CTA */}
+    <div className="flex flex-col items-center space-y-4">
+      <h2 className="text-3xl font-bold tracking-tighter text-primary-foreground sm:text-4xl md:text-5xl">
+        Ready to Accelerate Your Career with Avia AI?
+      </h2>
+      <p className="mx-auto max-w-[600px] text-primary-foreground/80 md:text-lg">
+        Join thousands of professionals advancing their careers with AI-powered guidance. 
+        Build resumes, practice interviews, and get personalized tips to stand out.
+      </p>
+      <Link href="/dashboard" passHref>
+        <Button
+          size="lg"
+          variant="secondary"
+          className="h-11 animate-bounce"
+        >
+          Start Your Journey Today <ArrowRight className="ml-2 h-4 w-4" />
+        </Button>
+      </Link>
+    </div>
+
+    {/* Divider */}
+    <div className="w-full border-t border-primary/20"></div>
+
+    {/* EduWizard CTA */}
+    <div className="flex flex-col items-center space-y-4">
+      <h2 className="text-3xl font-bold tracking-tighter text-primary-foreground sm:text-4xl md:text-5xl">
+        Grow and Learn with EduWizard
+      </h2>
+      <p className="mx-auto max-w-[600px] text-primary-foreground/80 md:text-lg">
+        Explore industry-demanded skills, upskill yourself, and expand your professional toolkit with EduWizard’s AI-powered guidance.
+      </p>
+      <Link href="https://eduwizard.netlify.app" passHref>
+        <Button
+          size="lg"
+          variant="outline"
+          className="h-11 animate-bounce"
+        >
+          Explore EduWizard <ArrowRight className="ml-2 h-4 w-4" />
+        </Button>
+      </Link>
+    </div>
+
+  </div>
+</section>
+
+
     </>
   );
 }
