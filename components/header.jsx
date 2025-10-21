@@ -1,5 +1,6 @@
 import React from "react";
 import { Button } from "./ui/button";
+import { BookOpen } from "lucide-react";
 import {
   PenBox,
   LayoutDashboard,
@@ -25,6 +26,7 @@ export default async function Header() {
   return (
     <header className="fixed top-0 w-full border-b bg-background/80 backdrop-blur-md z-50 supports-[backdrop-filter]:bg-background/60">
       <nav className="container mx-auto px-4 h-16 flex items-center justify-between">
+        {/* Logo */}
         <Link href="/">
           <Image
             src={"/logo.png"}
@@ -39,14 +41,14 @@ export default async function Header() {
         <div className="flex items-center space-x-2 md:space-x-4">
           <SignedIn>
             <Link href="/dashboard">
-              <Button
-                variant="outline"
-                className="hidden md:inline-flex items-center gap-2"
-              >
+              <Button className="hidden md:inline-flex items-center gap-2 bg-black text-white rounded-xl px-4 py-2 hover:bg-white hover:text-black transition-all duration-300">
                 <LayoutDashboard className="h-4 w-4" />
                 Industry Insights
               </Button>
-              <Button variant="ghost" className="md:hidden w-10 h-10 p-0">
+              <Button
+                variant="ghost"
+                className="md:hidden w-10 h-10 p-0 bg-black text-white hover:bg-white hover:text-black transition-all duration-300"
+              >
                 <LayoutDashboard className="h-4 w-4" />
               </Button>
             </Link>
@@ -68,10 +70,7 @@ export default async function Header() {
                   </Link>
                 </DropdownMenuItem>
                 <DropdownMenuItem asChild>
-                  <Link
-                    href="/ai-cover-letter"
-                    className="flex items-center gap-2"
-                  >
+                  <Link href="/ai-cover-letter" className="flex items-center gap-2">
                     <PenBox className="h-4 w-4" />
                     Cover Letter
                   </Link>
@@ -84,8 +83,22 @@ export default async function Header() {
                 </DropdownMenuItem>
               </DropdownMenuContent>
             </DropdownMenu>
+
+            <Link href="https://eduwizard.netlify.app" target="_blank">
+              <Button className="hidden md:inline-flex items-center gap-2 bg-black text-white rounded-xl px-4 py-2 hover:bg-white hover:text-black transition-all duration-300">
+                <BookOpen className="h-4 w-4" />
+                EduWizard
+              </Button>
+              <Button
+                variant="ghost"
+                className="md:hidden w-10 h-10 p-0 bg-black text-white hover:bg-white hover:text-black transition-all duration-300"
+              >
+                <BookOpen className="h-4 w-4" />
+              </Button>
+            </Link>
           </SignedIn>
 
+          {/* Sign In / User Buttons */}
           <SignedOut>
             <SignInButton>
               <Button variant="outline">Sign In</Button>
