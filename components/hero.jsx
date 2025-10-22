@@ -27,28 +27,28 @@ const HeroSection = () => {
   }, []);
 
   return (
-    <section className="w-full pt-36 md:pt-48 pb-10">
-      <div className="space-y-6 text-center">
-        <div className="space-y-6 mx-auto">
-          <h1 className="text-5xl font-bold md:text-6xl lg:text-7xl xl:text-8xl gradient-title animate-gradient">
-            Your AI Career Coach for
-            <br />
-            Professional Success
-          </h1>
-          <p className="mx-auto max-w-[600px] text-muted-foreground md:text-xl">
-            Advance your career with personalized guidance, interview prep, and
-            AI-powered tools for job success.
-          </p>
-        </div>
+    <section className="w-full pt-24 md:pt-32 pb-10">
+      {" "}
+      {/* reduced top padding */}
+      <div className="text-center space-y-4 md:space-y-6 mx-auto max-w-[800px]">
+        <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold gradient-title animate-gradient">
+          Your AI Career Partner for Smarter Growth & Success
+        </h1>
+        <p className="text-base md:text-lg lg:text-xl text-muted-foreground">
+          Transform your professional journey with intelligent insights,
+          personalized coaching, and AI-powered career tools designed for your
+          success.
+        </p>
+
         <div className="flex justify-center space-x-4">
           <Link href="/dashboard">
             <Button size="lg" className="px-8">
               Get Started
             </Button>
           </Link>
-          <Link href="https://www.youtube.com/itsbhh">
+          <Link href="https://eduwizard.netlify.app">
             <Button size="lg" variant="outline" className="px-8">
-              Watch Demo
+              Go to EduWizard
             </Button>
           </Link>
         </div>
@@ -56,7 +56,7 @@ const HeroSection = () => {
           <div ref={imageRef} className="hero-image">
             <Image
               src="/banner.jpeg"
-              width={1280}
+              width={1080}
               height={720}
               alt="Dashboard Preview"
               className="rounded-lg shadow-2xl border mx-auto"
