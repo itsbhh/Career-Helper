@@ -11,7 +11,7 @@ export const testimonial = [
     quote:
       "The career insights and interview prep tools were spot on. I landed a role that aligns perfectly with my skills and interests!",
     author: "Rohan Mehta",
-    image: "https://randomuser.me/api/portraits/men/68.jpg",
+    image: "/68 (1).jpg",
     role: "Software Developer",
     company: "TechSolutions Pvt. Ltd.",
   },
@@ -19,7 +19,7 @@ export const testimonial = [
     quote:
       "I never thought AI could improve my professional growth this much. The personalized feedback and resume suggestions were game-changing!",
     author: "Sanya Kapoor",
-    image: "https://randomuser.me/api/portraits/women/69.jpg",
+    image: "69.jpg",
     role: "UX Designer",
     company: "Creative Minds Co.",
   },
