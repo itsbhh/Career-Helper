@@ -6,7 +6,7 @@ import {
   LayoutDashboard,
   FileText,
   GraduationCap,
-  ChevronDown,
+  ChevronDown, 
   StarsIcon,
 } from "lucide-react";
 import Link from "next/link";
