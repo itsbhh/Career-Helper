@@ -184,11 +184,10 @@ export default function LandingPage() {
         </div>
       </section>
 
-   {/* CTA Section */}
+   
 <section className="w-full py-24 gradient rounded-lg">
   <div className="flex flex-col items-center justify-center space-y-8 text-center max-w-3xl mx-auto">
 
-    {/* Avia AI CTA */}
     <div className="flex flex-col items-center space-y-4">
       <h2 className="text-3xl font-bold tracking-tighter text-primary-foreground sm:text-4xl md:text-5xl">
         Ready to Accelerate Your Career with Avia AI?
@@ -198,20 +197,18 @@ export default function LandingPage() {
         Build resumes, practice interviews, and get personalized tips to stand out.
       </p>
       <Link href="/dashboard" passHref>
-        <Button
-          size="lg"
-          variant="secondary"
-          className="h-11 animate-bounce"
-        >
+        <Button size="lg" variant="secondary" className="h-11 animate-bounce">
           Start Your Journey Today <ArrowRight className="ml-2 h-4 w-4" />
         </Button>
       </Link>
     </div>
 
-    {/* Divider */}
     <div className="w-full border-t border-primary/20"></div>
 
-    {/* EduWizard CTA */}
+ 
+
+    <div className="w-full border-t border-primary/20"></div>
+
     <div className="flex flex-col items-center space-y-4">
       <h2 className="text-3xl font-bold tracking-tighter text-primary-foreground sm:text-4xl md:text-5xl">
         Grow and Learn with EduWizard
@@ -220,18 +217,31 @@ export default function LandingPage() {
         Explore industry-demanded skills, upskill yourself, and expand your professional toolkit with EduWizard’s AI-powered guidance.
       </p>
       <Link href="https://eduwizard.netlify.app" passHref>
-        <Button
-          size="lg"
-          variant="outline"
-          className="h-11 animate-bounce"
-        >
+        <Button size="lg" variant="outline" className="h-11 animate-bounce">
           Explore EduWizard <ArrowRight className="ml-2 h-4 w-4" />
+        </Button>
+      </Link>
+    </div>
+
+       {/* JobHub  */}
+    <div className="flex flex-col items-center space-y-4">
+      <h2 className="text-3xl font-bold tracking-tighter text-primary-foreground sm:text-4xl md:text-5xl">
+        Explore Opportunities on JobHub
+      </h2>
+      <p className="mx-auto max-w-[600px] text-primary-foreground/80 md:text-lg">
+        Discover curated job openings, internships, and career opportunities
+        designed to help you take the next step.
+      </p>
+      <Link href="https://jobhub12.netlify.app/" passHref>
+        <Button size="lg" variant="secondary" className="h-11 animate-bounce">
+          Explore JobHub <ArrowRight className="ml-2 h-4 w-4" />
         </Button>
       </Link>
     </div>
 
   </div>
 </section>
+
 
 
     </>
