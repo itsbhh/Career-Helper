@@ -19,7 +19,7 @@ export const testimonial = [
     quote:
       "I never thought AI could improve my professional growth this much. The personalized feedback and resume suggestions were game-changing!",
     author: "Sanya Kapoor",
-    image: "69.jpg",
+    image: "/69.jpg",
     role: "UX Designer",
     company: "Creative Minds Co.",
   },
