@@ -1,6 +1,6 @@
 import React from "react";
 import { Button } from "./ui/button";
-import { BookOpen } from "lucide-react";
+import { BookOpen, Briefcase } from "lucide-react";
 import {
   PenBox,
   LayoutDashboard,
@@ -84,6 +84,7 @@ export default async function Header() {
               </DropdownMenuContent>
             </DropdownMenu>
 
+            {/* EduWizard */}
             <Link href="https://eduwizard.netlify.app" target="_blank">
               <Button className="hidden md:inline-flex items-center gap-2 bg-black text-white rounded-xl px-4 py-2 hover:bg-white hover:text-black transition-all duration-300">
                 <BookOpen className="h-4 w-4" />
@@ -96,9 +97,22 @@ export default async function Header() {
                 <BookOpen className="h-4 w-4" />
               </Button>
             </Link>
+
+            {/* JobHub  */}
+            <Link href="https://jobhub12.netlify.app/" target="_blank">
+              <Button className="hidden md:inline-flex items-center gap-2 bg-black text-white rounded-xl px-4 py-2 hover:bg-white hover:text-black transition-all duration-300">
+                <Briefcase className="h-4 w-4" />
+                JobHub
+              </Button>
+              <Button
+                variant="ghost"
+                className="md:hidden w-10 h-10 p-0 bg-black text-white hover:bg-white hover:text-black transition-all duration-300"
+              >
+                <Briefcase className="h-4 w-4" />
+              </Button>
+            </Link>
           </SignedIn>
 
-          {/* Sign In / User Buttons */}
           <SignedOut>
             <SignInButton>
               <Button variant="outline">Sign In</Button>

@@ -28,12 +28,11 @@ const HeroSection = () => {
 
   return (
     <section className="w-full pt-24 md:pt-32 pb-10">
-      {" "}
-      {/* reduced top padding */}
       <div className="text-center space-y-4 md:space-y-6 mx-auto max-w-[800px]">
         <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold gradient-title animate-gradient">
           Your AI Career Partner for Smarter Growth & Success
         </h1>
+
         <p className="text-base md:text-lg lg:text-xl text-muted-foreground">
           Transform your professional journey with intelligent insights,
           personalized coaching, and AI-powered career tools designed for your
@@ -46,12 +45,22 @@ const HeroSection = () => {
               Get Started
             </Button>
           </Link>
+
+          {/* EduWizard  */}
           <Link href="https://eduwizard.netlify.app">
             <Button size="lg" variant="outline" className="px-8">
               Go to EduWizard
             </Button>
           </Link>
+
+          {/* JobHub */}
+          <Link href="https://jobhub12.netlify.app/" target="_blank">
+            <Button size="lg" variant="outline" className="px-8">
+              Go to JobHub
+            </Button>
+          </Link>
         </div>
+
         <div className="hero-image-wrapper mt-5 md:mt-0">
           <div ref={imageRef} className="hero-image">
             <Image
