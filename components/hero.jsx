@@ -39,23 +39,24 @@ const HeroSection = () => {
           success.
         </p>
 
-        <div className="flex justify-center space-x-4">
+        <div className="flex flex-col md:flex-row items-center justify-center gap-3 md:gap-4">
+
           <Link href="/dashboard">
-            <Button size="lg" className="px-8">
+            <Button size="lg" className="w-full md:w-auto px-8">
               Get Started
             </Button>
           </Link>
 
           {/* EduWizard  */}
           <Link href="https://eduwizard.netlify.app">
-            <Button size="lg" variant="outline" className="px-8">
+            <Button size="lg" variant="outline" className="w-full md:w-auto px-8">
               Go to EduWizard
             </Button>
           </Link>
 
           {/* JobHub */}
           <Link href="https://jobhub12.netlify.app/" target="_blank">
-            <Button size="lg" variant="outline" className="px-8">
+            <Button size="lg" variant="outline" className="w-full md:w-auto px-8">
               Go to JobHub
             </Button>
           </Link>
