@@ -44,12 +44,12 @@ export const generateAIInsights = async (industry) => {
   `;
 
   try {
-    // Correct payload structure for Gemini API
+    
     const result = await model.generateContent({
       contents: [{ role: "user", parts: [{ text: prompt }] }],
     });
 
-    // Handle different SDK response shapes
+   
     const text =
       result?.response?.candidates?.[0]?.content?.parts?.[0]?.text ||
       result?.response?.text?.() ||
