@@ -5,15 +5,10 @@ import { auth } from "@clerk/nextjs/server";
 import { revalidatePath } from "next/cache";
 import { GoogleGenerativeAI } from "@google/generative-ai";
 
-/**
- * Use Gemini SDK directly (simpler & stable)
- */
+
 const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
 const model = genAI.getGenerativeModel({ model: "gemini-2.0-flash" });
 
-/**
- * Generate AI-based industry insights
- */
 async function generateAIInsights(industry) {
   const prompt = `
     Analyze the current state of the ${industry} industry and provide insights in ONLY the following JSON format without any extra text:
@@ -44,10 +39,7 @@ async function generateAIInsights(industry) {
   }
 }
 
-/**
- * Update user profile and handle industry insights
- */
-// Update user profile and handle industry insights
+
 export async function updateUser(data) {
   const { userId } = await auth();
   if (!userId) throw new Error("Unauthorized");
@@ -104,9 +96,7 @@ export async function updateUser(data) {
 
 
 
-/**
- * Check if user completed onboarding
- */
+
 export async function getUserOnboardingStatus() {
   const { userId } = await auth();
   if (!userId) throw new Error("Unauthorized");
