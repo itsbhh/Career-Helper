@@ -8,7 +8,6 @@ export async function POST(req) {
       return new Response(JSON.stringify({ error: "Message is required" }), { status: 400 });
     }
 
-    // Find FAQ match (case-insensitive, exact or partial match)
     const faq = faqs.find(f =>
       f.question.toLowerCase() === message.trim().toLowerCase() ||
       f.question.toLowerCase().includes(message.trim().toLowerCase())
@@ -25,7 +24,7 @@ export async function POST(req) {
   }
 }
 
-// Optional GET to return all FAQs
+
 export async function GET() {
   return new Response(JSON.stringify({ faqs }), { status: 200 });
 }
