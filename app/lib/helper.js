@@ -1,4 +1,4 @@
-// Helper function to convert entries to markdown
+
 export function entriesToMarkdown(entries, type) {
   if (!entries?.length) return "";
 
