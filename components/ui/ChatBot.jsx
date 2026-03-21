@@ -12,7 +12,7 @@ export default function ChatBot() {
   const [awaitingMenuReturn, setAwaitingMenuReturn] = useState(false);
   const chatRef = useRef(null);
 
-  // Load FAQs & chat history
+
   useEffect(() => {
     fetch("/api/gemini")
       .then(res => res.json())
@@ -28,7 +28,6 @@ export default function ChatBot() {
     if (savedMessages) setMessages(JSON.parse(savedMessages));
   }, []);
 
-  // Save chat history & scroll
   useEffect(() => {
     localStorage.setItem("chatHistory", JSON.stringify(messages));
     if (chatRef.current) {
@@ -42,7 +41,7 @@ export default function ChatBot() {
   const toggleChat = () => setIsOpen(!isOpen);
   const toggleExpand = () => setIsExpanded(!isExpanded);
 
-  // Show FAQ menu line by line
+ 
   const showMenu = (faqList) => {
     if (!faqList || faqList.length === 0) return;
     const menu = "Please select a number:\n" + faqList.map(f => `${f.id}. ${f.question}`).join("\n");
@@ -50,7 +49,7 @@ export default function ChatBot() {
     setAwaitingMenuReturn(false);
   };
 
-  // Handle user input
+  
   const handleSendMessage = () => {
     if (!input.trim()) return;
 
@@ -58,7 +57,7 @@ export default function ChatBot() {
     const selectedNumber = parseInt(trimmed);
     const faq = faqs.find(f => f.id === selectedNumber);
 
-    // Add user message
+    
     setMessages(prev => [...prev, { sender: "user", text: trimmed }]);
 
     if (awaitingMenuReturn) {
@@ -81,10 +80,10 @@ export default function ChatBot() {
       ]);
     }
 
-    setInput(""); // clear input
+    setInput(""); 
   };
 
-  // Clear chat and restore menu
+
   const clearChat = () => {
     setMessages([]);
     localStorage.removeItem("chatHistory");
