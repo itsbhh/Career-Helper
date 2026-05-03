@@ -7,7 +7,7 @@ import { GoogleGenerativeAI } from "@google/generative-ai";
 export async function getValidModel() {
   const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
 
-  const preferredModels = ["gemini-1.5-pro", "gemini-1.5-flash", "gemini-pro"];
+  const preferredModels = ["gemini-2.5-flash-lite", "gemini-1.5-flash", "gemini-pro"];
   for (const name of preferredModels) {
     try {
       const model = genAI.getGenerativeModel({ model: name });
